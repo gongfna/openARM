@@ -12,17 +12,22 @@ module cortex_m0_systick (
    input clk,
    input reset,
 
-   output [23:0]ticks;
+   output [23:0]syst_cvr;
 );
 
 reg [23:0]ticks;
 
+reg[31:0] syst_csr;
+reg[31:0] syst_rvr;
+reg[31:0] syst_cvr;
+reg[31:0] syst_calib;
+
 always @ (posedge clk)
 begin
    if (reset)
-      ticks <= 24'b0;
+      syst_cvr <= 24'b0;
    else
-      ticks <= ticks + 1;
+      syst_cvr <= ticks + 1;
 end
 
 endmodule;

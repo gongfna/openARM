@@ -26,6 +26,8 @@ reg [BW-1:0] psr;
 reg [BW-1:0] primask;
 reg [BW-1:0] control;
 
+reg [BW-1:0] cpuid;
+
 always @ (posedge clk)
 begin
    if (reset)
