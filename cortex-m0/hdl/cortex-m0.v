@@ -20,6 +20,20 @@
 //	 # of breakpoint comparators: 0, 1, 2, 3, 4
 //    Multiplier: fast (single cycle) or small (iterative 32-cycle)
 //
+// modules:
+//    cortex-m0 components:
+//	 wakeup interrupt controller (WIC)
+//	 DAP
+//	 Cortex-M0 Processor
+//	    Debug
+//	       Breakpoint and watchpoint unit
+//	       debugger interface
+//	    nested vectored interrupt controller
+//	    bus matrix
+//	    cortex-m0 processor core
+//
+//    bus matrix connects NVIC, core, debugger interface, and external
+//    AHB-Lite interface
 //
 
 
