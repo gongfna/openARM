@@ -28,12 +28,16 @@ reg [BW-1:0] control;
 
 reg [BW-1:0] cpuid;
 
+// set the next program counter
 always @ (posedge clk)
 begin
    if (reset)
    begin
-
+      `PC <= 32'b0;
    end else begin
+      // what sources does the program counter have?
+      //    normal increment
+      //    jump/branch instructions
 
    end
 end
